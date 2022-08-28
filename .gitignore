@@ -1,0 +1,14 @@
+__pycache__/
+.ipynb_checkpoints/
+venv/
+workspace.code-workspace
+memo.md
+support/
+MLSys_100Knocks.zip
+
+# Pythonキャッシュ
+*.pyc
+
+# データは容量が大きすぎので除外
+.DS_Store
+100knock-data_analytics.zip
