@@ -1,14 +1,13 @@
+*.pyc
+.DS_Store
 __pycache__/
 .ipynb_checkpoints/
 venv/
+support/
 workspace.code-workspace
 memo.md
-support/
+
+# 追加分
 MLSys_100Knocks.zip
-
-# Pythonキャッシュ
-*.pyc
-
-# データは容量が大きすぎので除外
-.DS_Store
 100knock-data_analytics.zip
+output_data/
