@@ -3,11 +3,11 @@
 __pycache__/
 .ipynb_checkpoints/
 venv/
-support/
 workspace.code-workspace
 memo.md
 
 # 追加分
 MLSys_100Knocks.zip
 100knock-data_analytics.zip
+support/
 output_data/
