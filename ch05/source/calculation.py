@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 class Calc:
     @staticmethod
@@ -18,8 +17,7 @@ class Calc:
         return rank
 
     @staticmethod
-    def get_cancel_rank_df(
-        target_data: pd.DataFrame, m_store: pd.DataFrame) -> pd.DataFrame:
+    def get_cancel_rank_df(target_data, m_store):
         """
         本部用レポートデータ
         店舗データの作成
@@ -52,17 +50,17 @@ class Calc:
         """
         該当店舗の売上データの返却
         """
-        rank = Calc.get_store_rank(target_id, target_df, m_store)
+        rank = Calc.get_rank_df(target_df, m_store)
         store_sale = rank.loc[rank["store_id"] == target_id]["total_amount"]
 
         return store_sale
 
-    def get_store_cancel_rank(target_id, target_df):
+    def get_store_cancel_rank(target_id, target_df, m_store):
         """
         店舗用レポートデータ
         該当の店舗のキャンセル率ランクの返却
         """
-        cancel_df = Calc.get_cancel_rank_df(target_df)
+        cancel_df = Calc.get_cancel_rank_df(target_df, m_store)
         cancel_df = cancel_df.reset_index()
         store_cancel_rank = cancel_df.loc[cancel_df["store_id"] == target_id].index + 1
 
@@ -95,7 +93,6 @@ class Calc:
         """
         delivery_rank = Calc.get_delivery_rank_df(target_id, target_df, m_store)
         store_delivery_rank = delivery_rank.loc[
-            delivery_rank["store_id"]
-        ].index + 1
+            delivery_rank["store_id"] == target_id].index + 1
 
         return store_delivery_rank[0]
