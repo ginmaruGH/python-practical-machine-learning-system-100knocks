@@ -16,7 +16,10 @@ class Initialize:
         return delta
 
     def init_tran_df(
-            target_df: pd.DataFrame, m_store: pd.DataFrame, m_area: pd.DataFrame) -> pd.DataFrame:
+            target_df: pd.DataFrame,
+            m_store: pd.DataFrame,
+            m_area: pd.DataFrame
+        ) -> pd.DataFrame:
         """"""
         # 保守用店舗データの削除
         target_df = target_df.loc[target_df["store_id"] != 999]

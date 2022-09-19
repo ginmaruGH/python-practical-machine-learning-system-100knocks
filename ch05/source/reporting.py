@@ -104,14 +104,14 @@ class Reporting:
             cancel_rank = Calc.get_cancel_rank_df(df, m_store)
 
             # WorkSheet作成
-            ws = wb.create_sheet(title=f"{file_year_month}月度")
+            ws = wb.create_sheet(title=f"{year_month}月度")
 
             cell = ws.cell(1, 1)
-            cell.value = f"本部向け {file_year_month}月度 サマリーリポート"
+            cell.value = f"本部向け {year_month}月度 サマリーリポート"
             cell.font = Font(bold=True, color="008080", size=20)
 
             cell = ws.cell(3, 2)
-            cell.value = f"{file_year_month}月度 売上総額"
+            cell.value = f"{year_month}月度 売上総額"
             cell.font = Font(bold=True, color="008080", size=20)
 
             cell = ws.cell(3, 6)
