@@ -10,7 +10,6 @@ memo.md
 MLSys_100Knocks.zip
 100knock-data_analytics.zip
 support/
-data/
-output/
-*/data/0_input/
-*/data/99_master/
+**/data
+**/models
+output_data/
